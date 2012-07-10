@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>egzamin 2012</title>
+<link href="/site_media/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+</script>
+
+</head>
+<body >
+  <div id = "content">
+    Strona {{ pagenum }}
+    <table width="500 px">
+      <thead >
+	<tr >
+		<th colspan="1" >
+			Zdający
+		</th>
+		<th colspan="1">
+			Sala
+		</th>
+		<th colspan="1">
+			Wynik
+		</th>
+	</tr>
+	</thead>
+	<tbody >
+      {% if egzaminy %}
+	  {% for egz in egzaminy %}
+	      <tr class="{% cycle none,tr_with_color %}" onmouseover="{% cycle this.className='odd',this.className='even' %}"  onmouseout="this.className='{% cycle none,tr_with_color %}'" >
+	      <th>
+		Student {{ egz.idStudenta }} pyta {% if egz.idEgzaminatora %}{{ egz.idEgzaminatora }}{% endif %}
+	      </th>
+	      <th>
+		{% if egz.sala %}{{ egz.sala }}{% endif %}
+	      </th>
+	      <th>
+		{% if egz.wynik %}{{ egz.wynik }}{% endif %} {% if egz.get_status_display %}({{ egz.get_status_display }}){% endif %}
+	      </th>
+	    </tr>
+	  {% endfor %}
+      {% endif %}
+	</tbody>
+    </table>
+    {% if prevpage %}
+      <a href="/egzam/{{ prevpage }}/"> Poprzednia strona </a>
+    {% endif %}
+    {% if nextpage %}
+      <a href="/egzam/{{ nextpage }}/"> Następna strona </a>
+    {% endif %}
+
+  <br></br>
+  </div>
+
+</body>
+</html>

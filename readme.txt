@@ -1,0 +1,1 @@
+Działają mi punkty 1,2,4 z dodatkowych i oczywiśćie wersja podstawowa

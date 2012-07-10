@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    border: solid 2px;
+    
+}
+thead {
+	background-color: #FCCA85;
+	text-align: center;
+	font-weight: lighter;
+}
+tbody {
+	text-align: left;
+}
+thead th{
+    font-weight: 800;
+}
+tbody th {
+    font-weight: 300;
+}
+th, td {
+    border: solid 1px;
+    padding: 10px;
+}
+
+tr.tr_with_color {
+    background-color: AliceBlue;
+}
+
+tr.even {
+    background-color: GoldenRod;
+}
+
+tr.odd {
+    background-color: Gold;
+}
