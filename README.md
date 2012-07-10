@@ -3,4 +3,6 @@ django
 
 edycja
 
+jj
+
 project
