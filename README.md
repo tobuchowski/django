@@ -1,0 +1,8 @@
+django
+======
+
+edycja
+
+jj
+
+project
