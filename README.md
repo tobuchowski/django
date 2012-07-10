@@ -1,4 +1,6 @@
 django
 ======
 
+edycja
+
 project
